@@ -6,6 +6,7 @@
 #include <string.h>
 
 #include "../include/terminal.h"
+#include "../include/global.h"
 
 void repeat(const char *fragment, const size_t times) {
   for (size_t i = 0; i < times; i++) printf("%s", fragment);
@@ -30,13 +31,13 @@ void welcome() {
   char hello_message[length];
   sprintf(hello_message, template_message, user);
 
-  printf("\033[32m");
+  printf(TERMINAL_GREEN);
 
   repeat(COVER_SPECIAL_CHAR, tsizes.twidth - SPACE_LEFT);
   printf("\n");
 
   repeat("* ", spacing / 2);
-  printf("\033[34m%s\033[32m", hello_message);
+  printf("%s%s%s", TERMINAL_BLUE, hello_message, TERMINAL_GREEN);
   repeat(" *", spacing / 2 + SPACE_LEFT);
   printf("\n");
 
