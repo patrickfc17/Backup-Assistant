@@ -17,7 +17,12 @@ endef
 
 all: $(APP_NAME)/$(EXECUTABLE)
 	$(if $(CLEAN), $(call clean))
-	./$(BUILDDIR)/$(EXECUTABLE)
+	valgrind --leak-check=full \
+		--show-leak-kinds=all \
+		--track-origins=yes \
+		--verbose \
+		--log-file=./valgrind-journalf.txt \
+		./$(BUILDDIR)/$(EXECUTABLE)
 
 clean:
 	$(call clean)

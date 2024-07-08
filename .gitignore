@@ -6,3 +6,7 @@
 # Build
 
 /build
+
+# Testing and Reporting
+
+valgrind-journal.txt
