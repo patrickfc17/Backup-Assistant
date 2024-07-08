@@ -4,9 +4,8 @@
 
 #include "../include/output.h"
 
-int main(int argc, char const *argv[])
-{
-    welcome();
+int main(int argc, char const *argv[]) {
+  welcome();
 
-    return 0;
+  return 0;
 }
