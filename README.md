@@ -4,7 +4,7 @@
 
 ## Required For This Project
 
-- C Language with your default compiler (LLVM **clang** being used from the owner)
+- C Language with your default compiler (LLVM **clang** being used by the owner)
 - Make (min version: 4.4.1)
 - Linux Based System
 
